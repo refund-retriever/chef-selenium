@@ -1,6 +1,11 @@
 include_recipe "selenium::default"
 package "xvfb"
 
+template "/etc/hub_address" do
+  source "hub_address" 
+   mode 0644
+end
+
 template "/etc/selenium/node.json" do
  source "node.json.erb"
    mode 0644
