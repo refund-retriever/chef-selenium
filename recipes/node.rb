@@ -1,4 +1,4 @@
-include_recipe "selenium::default"
+include_recipe "selenium::server"
 package "xvfb"
 
 template "/etc/hub_address" do
